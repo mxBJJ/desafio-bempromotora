@@ -20,7 +20,6 @@ public class Question implements Serializable {
     private String optionC;
     private String optionD;
 
-    @JsonBackReference
     @ManyToMany
     @JoinTable(name = "research_question",
     joinColumns = @JoinColumn(name = "question_id"),

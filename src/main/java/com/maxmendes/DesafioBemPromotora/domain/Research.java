@@ -16,16 +16,17 @@ public class Research implements Serializable {
 
     private String title;
 
-    @JsonManagedReference
     @ManyToMany(mappedBy = "researches")
     private List<Question> questions = new ArrayList<>();
 
     public Research() {
     }
 
-    public Research(Integer id, String title) {
+
+    public Research(Integer id, String title, List<Question> questions) {
         this.id = id;
         this.title = title;
+        this.questions = questions;
     }
 
     public Integer getId() {
@@ -42,5 +43,13 @@ public class Research implements Serializable {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public List<Question> getQuestions() {
+        return questions;
+    }
+
+    public void setQuestions(List<Question> questions) {
+        this.questions = questions;
     }
 }

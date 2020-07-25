@@ -2,6 +2,7 @@ package com.maxmendes.DesafioBemPromotora.resource;
 
 import com.maxmendes.DesafioBemPromotora.domain.Answer;
 import com.maxmendes.DesafioBemPromotora.service.AnswersService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,6 +15,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+@Api("Endpoint de respostas dos clientes.")
 @RestController
 @RequestMapping(value = "api/respostas")
 public class AnswersResource {

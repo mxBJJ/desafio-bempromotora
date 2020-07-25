@@ -2,6 +2,7 @@ package com.maxmendes.DesafioBemPromotora.resource;
 
 import com.maxmendes.DesafioBemPromotora.domain.Research;
 import com.maxmendes.DesafioBemPromotora.service.ResearchesService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+@Api("Endpoint de pesquisas criadas.")
 @RestController
 @RequestMapping(value = "api/pesquisas")
 public class ResearchesResource {

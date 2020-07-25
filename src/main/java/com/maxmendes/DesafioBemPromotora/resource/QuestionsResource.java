@@ -2,6 +2,7 @@ package com.maxmendes.DesafioBemPromotora.resource;
 
 import com.maxmendes.DesafioBemPromotora.domain.Question;
 import com.maxmendes.DesafioBemPromotora.service.QuestionsService;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -12,6 +13,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 import java.net.URI;
 import java.util.List;
 
+@Api("Enpoint de perguntas do banco de dados.")
 @RestController
 @RequestMapping(value = "api/perguntas")
 public class QuestionsResource {
